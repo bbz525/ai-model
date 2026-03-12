@@ -1,0 +1,31 @@
+# 训练框架依赖 - Mac 版本
+
+# 核心训练库
+transformers>=4.40.0
+# Mac 用户安装 PyTorch: pip install torch torchvision torchaudio
+# 根据你的 Mac 类型选择：
+# - Intel Mac: pip install torch
+# - Apple Silicon (M1/M2/M3): pip install torch torchvision torchaudio
+datasets>=2.14.0
+accelerate>=0.25.0
+
+# 高效微调 (Mac 不支持 Unsloth)
+# unsloth>=2024.5.0  # 仅支持 CUDA
+peft>=0.8.0
+trl>=0.8.0
+
+# 量化支持 (Mac 不支持 bitsandbytes)
+# bitsandbytes>=0.41.0  # 仅支持 CUDA
+optimum>=1.16.0
+
+# LlamaFactory（可选）
+# llmtuner>=0.7.0
+
+# 其他工具
+wandb>=0.16.0  # 实验跟踪
+sentencepiece>=0.1.99  # Tokenizer
+protobuf>=3.20.0
+
+# vLLM 部署 (Mac 不支持 vLLM)
+# vllm>=0.4.0  # 仅支持 CUDA
+# Mac 替代方案: llama-cpp-python 或 transformers 直接推理
