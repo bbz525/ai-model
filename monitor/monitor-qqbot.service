@@ -1,0 +1,21 @@
+[Unit]
+Description=Monitor QQ Bot Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=monitor
+Group=monitor
+WorkingDirectory=/opt/monitor
+Environment="PATH=/opt/monitor/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+EnvironmentFile=/opt/monitor/.env
+ExecStart=/opt/monitor/venv/bin/python qq_chat.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=monitor-qqbot
+
+[Install]
+WantedBy=multi-user.target

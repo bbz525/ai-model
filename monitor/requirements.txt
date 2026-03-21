@@ -1,0 +1,10 @@
+opencv-python==4.10.0.84
+imutils==0.5.4
+requests==2.32.5
+python-dotenv==1.0.1
+qq-botpy==1.2.1
+aiohttp==3.10.5
+openai==2.29.0
+soundfile==0.13.1
+sounddevice==0.5.5
+numpy==1.26.4
